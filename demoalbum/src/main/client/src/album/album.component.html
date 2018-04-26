@@ -1,0 +1,14 @@
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<h2>Here are a list of uploaded pictures: </h2>
+<div *ngFor="let photo of photos | async">
+<ul>
+  <li>
+    <h3>{{photo.name}}</h3>
+  </li>
+  <img src="{{photo.imageUrl}}"/>
+</ul>
+</div>
